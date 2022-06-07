@@ -1,0 +1,16 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <img style="max-width:250px; margin-top:-7px;" src="{{ url }}">
+
+<form method="post">{% csrf_token %}
+    {{ formulario.as_p}}
+    <input type="submit" value="Iniciar Sesión">
+</form>
+<h2>{{mensaje}}</h2>
+{% endblock %}
+
+{% block titulo %}
+    <h1 >Inicie su sesión.</h1>
+{% endblock %}

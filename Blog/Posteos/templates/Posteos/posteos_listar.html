@@ -1,0 +1,29 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+{% for posteos in object_list %}
+<li>{{ posteos.titulo }}</li>
+    <button> 
+    <a href="{% url 'posteos_detalle' posteos.id %}">Detalle</a>
+    </button>    
+    <button>
+    <a href="{% url 'posteos_editar' posteos.id %}">Editar</a>
+    </button>
+    <button>
+    <a href="{% url 'posteos_borrar' posteos.id %}">Borrar</a>
+    </button>
+{% endfor %}
+<p>
+    <button>
+    <a href="{% url 'posteos_crear' %}">Nuevo Post</a>    
+    </button>
+    <button>
+    <a href="{% url 'home' %}">Volver a Inicio</a>  
+    </button>
+</p>
+{% endblock %}
+
+{% block titulo %}
+    <h1 >Listado de resúmenes.</h1>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style="color:tomato">Rellene y edite los campos del Post:</h1>
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <table>
+        {{ form.as_table}}
+    </table>
+    <input type="submit" value="Continuar">
+</form>
+{% endblock %}

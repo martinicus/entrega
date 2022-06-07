@@ -1,0 +1,13 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style="color:tomato">Complete y edite datos del Profesor:</h1>
+<form method="POST">{% csrf_token %}
+    <table>
+    {{ form.as_p}}
+    </table>
+    <input type="submit" value="Continuar">
+</form>
+{% endblock %}
+

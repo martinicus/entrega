@@ -1,0 +1,15 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style="color:tomato">Mi perfil</h1>
+<h6>
+    Me llamo Rodrigo, soy de la provincia de La Pampa. Egresé como Técnico en PC de la EETN2 de Bahía Blanca. Después de 20 años me reencuentro con la programación a través de CoderHouse y de este desafío. Actualmente me encuentro estudiando la Lic en Historia en la Facultad de Filosofía y Letras. Este es el inicio de un blog personal para comenzar a publicar mis resúmenes de la cursada.
+</h6>
+
+<button>
+    <a href="{% url 'home' %}">Volver a Inicio</a>  
+</button>
+
+{% endblock %}
+

@@ -1,0 +1,12 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<form method="POST">{% csrf_token %}
+<h1 style="color:tomato">Se va a eliminar al siguiente profesor:</h1>
+<p>Nombre: <i>{{profesor.nombre}}</i></p>
+<p>Apellido: <i>{{profesor.apellido}}</i></p>
+<p>Email: <i>{{profesor.email}}</i></p>
+<input type="submit" value="Continuar">
+</form>
+{% endblock %}

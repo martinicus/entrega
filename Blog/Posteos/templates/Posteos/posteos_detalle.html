@@ -1,0 +1,20 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style="color:tomato">Detalle del Post:</h1>
+<table>Titulo: <i>{{post.titulo}}</i></table>
+<table>Subtitulo: <i>{{post.subtitulo}}</i></table>
+<table>Cuerpo: <i>{{post.cuerpo}}</i></table>
+<table>Autor: <i>{{post.autor}}</i></table>
+<table>Imagen:
+<img src="{{post.imagen.url}}"  alt="..." style="transform: scale(0.7)"></table>
+<table>Fecha: <i>{{post.fecha}}</i></table>
+<button>      
+<a href="{% url 'posteos_listar' %}">Volver a la lista</a>
+</button>
+
+{% endblock %}
+{% block titulo %}
+
+{% endblock %}

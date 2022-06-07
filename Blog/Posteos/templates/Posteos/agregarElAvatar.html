@@ -1,0 +1,20 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style="color:tomato">Editar el avatar de {{usuario}}</h1>
+
+
+<form action="{% url 'agregarElAvatar'  %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+    <table>
+        {{ formulario.as_table}}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock %}
+
+{% block titulo %}
+    <h1 >Editando el Avatar.</h1>
+    
+{% endblock %}

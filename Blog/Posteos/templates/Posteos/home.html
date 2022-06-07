@@ -1,0 +1,19 @@
+{% extends "Posteos/padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+{% if  request.user.is_authenticated %}  
+    <h1 style="color:tomato">Bienvenido {{ user }}. </h1>
+    <h3 style="color:tomato">
+    <p>
+    <li><a href="{% url 'posteos_listar' %}">Listado de resúmenes</a></li>
+    <li><a href="{% url 'profesor_listar' %}">Listado de Profesores</a></li>
+    </p>
+    </h3>
+{% endif %}  
+{% endblock %}
+
+{% block titulo %}
+    <h1 >{{mensaje}}</h1>
+    <img style="max-width:250px; margin-top:-7px;" src="{{ url }}">
+{% endblock %}
